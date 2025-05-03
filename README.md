@@ -3,17 +3,17 @@
 ## What is this??
 
 `analyzer.go` is a linter to detect and fix variable shadowing against imported packages in Go code.\
-It is generally not good practice to name a variable as it shadows an imported package. This linter will help you to
+It is generally not good practice to name a variable in a way that shadows an imported package. This linter helps you
 detect such cases.
 
 > [!NOTE]
-> I did not find any linters available as OSS to detect this at first, so I created this linter.
-> However it turned out that [go-critic](https://github.com/go-critic/go-critic) does support this in `importShadow` check.
+> I did not find any linters available as OSS to detect this issue initially, so I created this linter.
+> However, it turned out that [go-critic](https://github.com/go-critic/go-critic) does support this via the `importShadow` check.
 > 
-> `go-critic` does not support suggesting fixes for this, but this linter does, so this can still be useful (Support is limited)
+> While `go-critic` does not support suggesting fixes for this issue, this linter does (though with limited support).
 > 
-> It is recommended to use `go-critic` instead of this linter, as it is available as a part of `golangci-lint`. \
-> You can write config like below to enable `importShadow` check in `golangci-lint`:
+> It is recommended to use `go-critic` instead of this linter, as it is available as part of `golangci-lint`. \
+> You can use the following configuration to enable the `importShadow` check in `golangci-lint`:
 > ```yaml
 > version: 2
 > linters:
