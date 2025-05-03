@@ -6,9 +6,8 @@ import (
 	"testing"
 )
 
-func TestPkgShadow(t *testing.T) {
+func TestImportVarShadowLint(t *testing.T) {
 	testdata := analysistest.TestData()
 
-	analysistest.RunWithSuggestedFixes(t, testdata, goImportVarShadowLint.Analyzer, "a")
 	analysistest.RunWithSuggestedFixes(t, testdata, goImportVarShadowLint.Analyzer, "a")
 }
